@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exos javascript</title>
+    </head>
+    <body>
+
+  <audio id="majeur" src="./Talking.mp3"/></audio>
+  <audio id="mineur" src="./Schub.mp3" /></audio>
+
+
+            <label for="nom">Quel est ton nom ?</label>
+            <input type="text" id="nom" />
+
+            <label for="age">Quel est ton âge ?</label>
+            <input type="number" id="age" />
+
+            <input type="submit" value="OK" onclick="confirm();"/>
+
+            <p id="reponse"></p>
+
+              <script type="text/javascript">
+                function confirm(){
+
+                  var monAge = document.getElementById("age").value;
+                  var monNom = document.getElementById("nom").value;
+                  var texte = ("Bonjour " + monNom);
+
+                  document.getElementById("reponse").innerHTML = texte;
+
+                  if (monAge>17) {
+                  player = document.getElementById("majeur");
+                  }else{
+                  player = document.getElementById("mineur");
+                  }
+                  player.play();
+                  }
+                  </script>
+          </body>
+</html>
